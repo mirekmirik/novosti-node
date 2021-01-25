@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-nav">
+
+            {{#if isHome}}
+            <a class="nav-link active" aria-current="page" href="/">Главная</a>
+            {{else}}
+            <a class="nav-link" aria-current="page" href="/">Главная</a>
+            {{/if}}
+
+
+
+            {{#if isAuth}}
+            {{#if isCreate}}
+            <a class="nav-link active" href="/create-news">Создать новость</a>
+            {{else}}
+            <a class="nav-link" href="/create-news">Создать новость</a>
+            {{/if}}
+
+
+
+
+            {{#if isOtzivi}}
+            <a class="nav-link active" href="/otzivi">Отзывы/Пожелания</a>
+            {{else}}
+            <a class="nav-link" href="/otzivi">Отзывы/Пожелания</a>
+            {{/if}}
+
+
+
+            <a class="nav-link" href="/auth/logout">Выйти</a>
+            {{else}}
+            {{#if isLogin}}
+            <a class="nav-link active" href="/auth/login">Войти</a>
+            {{else}}
+            <a class="nav-link" href="/auth/login">Войти</a>
+
+
+            {{/if}}
+            {{/if}}
+
+
+        </div>
+    </div>
+    </div>
+</nav>
+
+
+
+{{!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-nav">
+
+            {{#if isHome}}
+            <a class="nav-link active" aria-current="page" href="/">Главная</a>
+            {{else}}
+            <a class="nav-link" aria-current="page" href="/">Главная</a>
+            {{/if}}
+
+            {{#if adminAuth}}
+            {{#if isCreate}}
+            <a class="nav-link active" href="/create-news">Создать новость</a>
+            {{else}}
+            <a class="nav-link" href="/create-news">Создать новость</a>
+            {{/if}}
+
+            {{#if isEdit}}
+            <a class="nav-link active" href="/edit-news">Редактировать новость</a>
+            {{else}}
+            <a class="nav-link" href="/edit-news">Редактировать новость</a>
+            {{/if}}
+
+            <a class="nav-link" href="/otzivi">Отзывы/Пожелания</a>
+            {{/if}}
+
+
+
+
+            <a class="nav-link" href="/auth/logout">Выйти</a>
+
+            {{#if isLogin}}
+            {{#if isAuth}}
+            <a class="nav-link" href="/auth/login">Вход</a>
+            {{else}}
+            <a class="nav-link" href="/auth/logout">Вход</a>
+            {{/if}}
+            {{/if}}
+
+
+        </div>
+    </div>
+    </div>
+</nav> --}}

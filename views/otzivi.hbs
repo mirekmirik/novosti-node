@@ -1,0 +1,56 @@
+<div class="otzivi-background">
+    <div class="container bk">
+        <h1>Отзывы/Пожелания</h1>
+        <form action="/otzivi" method="POST">
+            <h4 style="text-align: center; padding-top: 50px; ">Оставьте анонимный отзыв</h4>
+            <div class="name">
+                <h5 style="padding-top: 50px">Введите имя</h5>
+                <label for="name"></label>
+                <input type="text" name="name" style="color: white"></input>
+            </div>
+            <div class="desc">
+                <h5>Введите описание</h5>
+                <label for="desc"></label>
+                <textarea name="desc" style="border-radius: 10px;" style="background-color: white;"></textarea>
+            </div>
+            <button type="submit" class="btn-small">Опубликовать</button>
+        </form>
+
+
+        {{#if otzivi.length}}
+        {{#each otzivi}}
+        <form action="/otzivi-delete" method="POST">
+            <div style="padding-top: 70px;">
+                <div class="otzivi-ram">
+                    <div class="name-otziv">
+                        <div class="cont">
+                            <div class="imgname">
+                                <img src="https://gloss.ua/file/t/source/mh2019/may/anonymous-4165613_1920_thumb958x639.jpg"
+                                    alt="anonymous" width="100" style="border-radius: 10px;">
+                                <h4>{{name}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc-otziv">
+                        <p>{{desc}}</p>
+                    </div>
+                    <div class="date-otziv">
+                        <p style="color: black; border: 1px solid black;">{{date}}</p>
+                    </div>
+                    <div class="btn-razmeshenie">
+                        <button class="btn bg-dark text-danger" type="submit" name="id" value="{{_id}}">X</button>
+                        <a href="/edit-otziv/{{_id}}">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        {{/each}}
+
+        {{else}}
+        <p>Отзывов нет</p>
+        {{/if}}
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,33 @@
+<div class="home-background">
+
+    <h1 style="text-align: center;">НОВОСТИ СЕГОДНЯШНЕГО МИРА VALORANT</h1>
+    <div class="contain wr">
+        {{#if news.length}}
+        {{#each news}}
+        <form action="/" method="POST">
+            <div class="item shadow-lg p-3 mb-5 bg-orange">
+                <img src="{{img}}" alt="{{title}}" width="295" height="240">
+                <h4>{{title}}</h4>
+                <div class="continue">
+                    <a href="/main-new/{{_id}}">Кликните чтобы увидеть продолжение...</a>
+                    {{#if @root.isAuth}}
+
+                    <button class="btn bg-dark text-danger" type="submit" name="id" value="{{_id}}">X</button>
+                    <a href="/edit-news/{{_id}}" class="btn bg-dark text-danger">Edit</a>
+
+                    {{/if}}
+                </div>
+
+                <p class="date">{{date}}</p>
+
+            </div>
+
+        </form>
+        {{/each}}
+        {{else}}
+        <p>Нет новостей!</p>
+        {{/if}}
+
+    </div>
+
+</div>

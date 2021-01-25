@@ -1,0 +1,14 @@
+<div class="otzivi-background">
+    <div class="container bk">
+        <h1>Редактировать отзыв</h1>
+        <form action="/edit-otziv" method="POST">
+            <div class="desc">
+                <h5>Введите описание</h5>
+                <label for="desc"></label>
+                <textarea name="desc" style="border-radius: 10px;" style="background-color: white;"></textarea>
+            </div>
+            <input type="hidden" name="id" value="{{otziv._id}}">
+            <button type="submit" class="btn-small">Редактировать</button>
+        </form>
+    </div>
+</div>

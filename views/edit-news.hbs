@@ -1,0 +1,38 @@
+<h1>Редактировать {{news.title}}</h1>
+
+
+
+<form action="/edit-news" method="POST">
+
+    <div class="mb-3">
+        <label for="img" class="form-label" style="font-size: 20px; color: black">Ссылка
+            на
+            картинку</label>
+        <input type="text" class="form-control" id="title" style="color: black; font-size: 20px" name="img">
+    </div>
+    <div class="mb-3">
+        <label for="title" class="form-label" style="font-size: 20px; color: black" maxlength="15">Введите
+            заголовок</label>
+        <input type="text" class="form-control" id="title" style="color: black; font-size: 20px" maxlength="120"
+            name="title">
+    </div>
+
+    <div class="mb-3">
+        <label for="type" class="form-label" style="font-size: 20px; color: black" maxlength="15">Введите тип:
+            СЛУХИ/МНЕНИЕ/РАССКАЗ/ФАКТ</label>
+        <input type="text" class="form-control" id="type" style="color: black; font-size: 20px" maxlength="40"
+            name="type">
+    </div>
+
+
+    <div class="form-group">
+        <label for="description">Example textarea</label>
+        <textarea class="form-control" id="description" rows="3" name="description" id="description"></textarea>
+    </div>
+
+    <input type="hidden" name="id" value="{{news._id}}">
+    <button type="submit" class="btn btn-secondary">РЕДАКТИРОВАТЬ</button>
+
+
+
+</form>

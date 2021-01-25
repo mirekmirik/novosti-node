@@ -1,0 +1,33 @@
+<div class="auth-background">
+    <div class="container">
+
+        <h1 style="text-align: center; padding-top:30px; color: white">Регистрация</h1>
+        {{#if errorRegister}}
+        <p class="alert">{{errorRegister}}</p>
+        {{/if}}
+        <form action="/auth/register" method="POST">
+            <div class="mb-3" style="padding-top: 30px;">
+                <h3 style="color: white;">Введите e-mail</h3>
+                <label for="remail" class="form-label"></label>
+                <input name="remail" type="email" class="form-control" id="remail" style="border-radius: 10px;">
+            </div>
+            <div class=" mb-3">
+                <h3 style="color: white;">Введите пароль</h3>
+                <label for="rpassword" class="form-label"></label>
+                <input name="rpassword" type="password" class="form-control" id="rpassword" style="color: cyan;">
+            </div>
+            <div class="mb-3">
+                <h3 style="color: white">Введите имя</h3>
+                <label for="username" class="form-label"></label>
+                <input name="username" type="text" class="form-control" id="username" style="color: cyan;">
+            </div>
+            <div class="mb-3">
+                <h3 style="color: white;">Подтвердите пароль</h3>
+                <label for="confirm" class="form-label"></label>
+                <input name="confirm" type="password" class="form-control" id="confirm" style="color: cyan;">
+            </div>
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+        </form>
+        <a href="/auth/login" style="color: cyan;">Ссылка на Вход</a>
+    </div>
+</div>
